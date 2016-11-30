@@ -30,6 +30,15 @@ BinaryTreeNode.prototype.insertRight = function(value) {
     return this.right;
 };
 
+function traverseTree(node) {
+    var currentNode = node;
+    if (currentNode) {
+        traverseTree(currentNode.left);
+        console.log(currentNode.value);
+        traverseTree(currentNode.right);
+    }
+}
+
 /* Interview Cake Provided Code - End */
 BinaryTreeNode.prototype.hasChild = function() {
     if(this.left || this.right)
